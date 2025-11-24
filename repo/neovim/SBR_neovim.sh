@@ -1,13 +1,9 @@
 #!/bin/bash
 set -e
 
-PREFIX="${PREFIX:-/usr}"
+PREFIX="${PREFIX:-./packages/usr/}"
 BUILD_TYPE="${BUILD_TYPE:-Release}"
-#PLACE HOLDER
 DESTDIR="./packages/bin/"
-
-: "${CXXFLAGS:="-O2"}"
-: "${LDFLAGS:=""}"
 
 cd neovim || { echo "Source not found"; exit 1; }
 
